@@ -47,7 +47,7 @@ Example made by Mikael Roos, me@mikaelroos.se, last updated 2012-08-21.<br/><br/
   <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS3</a>
   <a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance">Unicorn</a>
   <a href="http://validator.w3.org/i18n-checker?docAddr=<?=$selfurl?>">i18n</a>
-  <a href="../source.php?dir=<?=$dir?>&amp;file=<?=basename($self)?>#file">Sourcecode</a>
+  <a href="http://dbwebb.se/kod-exempel/source.php?dir=<?=$dir?>&amp;file=<?=basename($self)?>#file">Sourcecode</a>
 </p>
 
 </div>
