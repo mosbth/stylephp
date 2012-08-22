@@ -37,7 +37,7 @@ $self = $_SERVER['PHP_SELF']; $selfurl = 'http://dbwebb.se'.$self; $dirs=explode
 
 <h2>Done!</h2>
 <p>Have fun and review the <a href="../source.php?dir=<?=$dir?>">sourcecode for this example</a> to review how its working.</p>
-<p>Or <a href=''>clone the whole example</a>, including lessphp essentials, from GitHub.</p>
+<p>Or <a href='https://github.com/mosbth/stylephp'>clone the whole example</a>, including lessphp essentials, from GitHub.</p>
 <p><a href='http://dbwebb.se/f/1489'>Discuss this example in the forum</a>.</p>
 
 <p class=footer>
