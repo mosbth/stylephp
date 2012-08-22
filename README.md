@@ -5,6 +5,10 @@ This project is an example where lessphp is used for serverside compile LESS to 
 
 The project includes the essentials from lessphp to make it a working example. Just clone it and point your browser to the catalogue. You need to make the catalogue writable for the webserver since lessphp creates a cache-file, `style.less.cache`, and writes the resulting `stylesheet.css`.
 
+You can see the working example here: 
+
+* http://dbwebb.se/kod-exempel/lessphp
+
 
 Details for lessphp
 ------------------------------------------------
@@ -20,4 +24,4 @@ Visit the website for latest details and documentation on lessphp.
 
 
  .   
-..:  Copyright 2011 by Mikael Roos (me@mikaelroos.se)
+..:  Copyright 2012 by Mikael Roos (me@mikaelroos.se)
