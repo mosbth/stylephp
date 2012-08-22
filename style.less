@@ -1,0 +1,28 @@
+// Style using less
+@width: 700px;
+@color: #333;
+@bgcolor: #a3a3fe;
+
+// from bootstrap
+.gradient(@startColor: #555, @endColor: #333) {
+  background-color: mix(@startColor, @endColor, 60%);
+  background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+  background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
+}
+
+html{.gradient(@bgcolor, lighten(@bgcolor, 10%));}
+
+body{margin:8px auto; width:@width;color:@color;border-left:4px double @bgcolor;border-right:4px double @bgcolor;padding:4px 1em 4px 1em;background-color:fade(#fff, 30%);
+  h1{color:@color;border-bottom:1px solid lighten(@color, 50%);}
+  p{color:@color;}
+}
+
+.content{padding:1em;background-color:fade(#fff, 60%)}
+
+.footer{border-top:1px solid lighten(@color, 50%);font-size:smaller;padding-top:1em;;
+}
