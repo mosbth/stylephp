@@ -13,6 +13,8 @@
  *
  * 2013-10-28: 
  * Included lessphp 0.4.0.
+ * Always send last-modified header.
+ * Added style_config.php.
  *
  * 2012-08-27: 
  * Changed time() to gmtime() to make 304 work.
@@ -24,8 +26,19 @@
  * 2012-04-18: First try.
  *
  */
+// Add config-file if available
+$config = dirname(__FILE__).'/style_config.php';
+if(is_file($config)) {
+  include($config);
+}
+else {
+  define('LESSPHP_PATH', dirname(__FILE__)."/lessphp/lessc.inc.php");
+}
+
+
 // Include the lessphp-compiler
-include dirname(__FILE__)."/lessphp/lessc.inc.php";
+include(LESSPHP_PATH);
+
 
 // Use gzip if available
 ob_start("ob_gzhandler") or ob_start();
@@ -64,6 +77,7 @@ $css  = 'style.css';
 $changed = autoCompileLess($less, $css);
 $time = filemtime($css);
 $gmdate = gmdate("D, d M Y H:i:s", $time);
+
 
 // Write it out and leave a response
 header('Last-Modified: ' . $gmdate . " GMT"); 
