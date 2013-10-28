@@ -15,13 +15,12 @@ Details for lessphp
 
 * Made by: leaf
 * Website: http://leafo.net/lessphp
-* Version included: 0.3.8 (2012-08-18)
+* Version included: 0.4.0 (2013-08-09)
 * License: Dual license, MIT LICENSE and GPL VERSION 3
-* Lydia path: `themes/grid/lessphp`
-* Used by: `themes/grid/style.php`
+* Path: `lessphp`
 
 Visit the website for latest details and documentation on lessphp.
 
 
  .   
-..:  Copyright 2012 by Mikael Roos (me@mikaelroos.se)
+..:  Copyright 2012-13 by Mikael Roos (me@mikaelroos.se)

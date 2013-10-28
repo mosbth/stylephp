@@ -11,6 +11,9 @@
  * @example http://dbwebb.se/kod-exempel/lessphp/
  * @link https://github.com/mosbth/stylephp
  *
+ * 2013-10-28: 
+ * Included lessphp 0.4.0.
+ *
  * 2012-08-27: 
  * Changed time() to gmtime() to make 304 work.
  *
@@ -60,12 +63,16 @@ $less = 'style.less';
 $css  = 'style.css';
 $changed = autoCompileLess($less, $css);
 $time = filemtime($css);
+$gmdate = gmdate("D, d M Y H:i:s", $time);
 
 // Write it out and leave a response
-if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) && strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']) >= $time){  
+header('Last-Modified: ' . $gmdate . " GMT"); 
+if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) && strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']) == $time){  
   header("HTTP/1.0 304 Not Modified");  
 } else {  
-  header('Content-type: text/css');  
-  header('Last-Modified: ' . gmdate("D, d M Y H:i:s", $time) . " GMT");  
+  header('Content-type: text/css');
   readfile($css);  
-}  
+}
+
+
+

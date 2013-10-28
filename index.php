@@ -34,6 +34,8 @@ $self = $_SERVER['PHP_SELF']; $selfurl = 'http://dbwebb.se'.$self; $dirs=explode
 <h2>Step 4: Add stylesheet to the webpage</h2>
 <p>Just add the "stylesheet", <code>style.php</code>, as any normal stylesheet to your webpage.</p>
 <p><code><?=htmlentities("<link rel='stylesheet' type='text/css' href='style.php' />")?></code></p>
+<p>When you are done with development, and want to make it a production environment, just change the stylesheet, change <code>.php</code> to <code>.css</code>.</p>
+<p><code><?=htmlentities("<link rel='stylesheet' type='text/css' href='style.css' />")?></code></p>
 
 <h2>Done!</h2>
 <p>Have fun and review the <a href="../source.php?dir=<?=$dir?>">sourcecode for this example</a> to review how its working.</p>
@@ -41,7 +43,7 @@ $self = $_SERVER['PHP_SELF']; $selfurl = 'http://dbwebb.se'.$self; $dirs=explode
 <p><a href='http://dbwebb.se/f/1489'>Discuss this example in the forum</a>.</p>
 
 <p class=footer>
-Example made by Mikael Roos, me@mikaelroos.se, last updated 2012-08-21.<br/><br/>
+Example made by Mikael Roos, me@mikaelroos.se, last updated 2013-10-28.<br/><br/>
   <a href="http://validator.w3.org/check/referer">HTML5</a>  
   <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
   <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS3</a>
