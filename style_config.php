@@ -6,49 +6,59 @@
  * and to make it easier to make non breaking updates to style.php.
  *
  */
-//
-// Path to lessphp compiler include script 
-//
-$config['path'] = dirname(__FILE__)."/lessphp/lessc.inc.php";
+return array(
+    /**
+     * Path to lessphp compiler include script 
+     */
+    'path_lessphp' => __DIR__."/lessphp/lessc.inc.php",
 
 
-//
-// Include import paths for compiler
-//
-$config['imports'] = null;
+    /**
+     * Filename for style.less, without prefix .less
+     * Allowed characters [a-zA-Z0-9_-]
+     */
+    //'style_file' => isset($_GET['file']) ? $_GET['file'] : 'style',
+    'style_file' => 'style',
 
 
-//
-// Output format for resulting css-code, set to null for default.
-//
-// lessjs (default) — Same style used in LESS for JavaScript
-// compressed — Compresses all the unrequired whitespace
-// classic — lessphp’s original formatter
-//
-$config['formatter'] = null;
-//$config['formatter'] = 'compressed';
+    /**
+     * Include import paths for compiler
+     */
+    'imports' => null,
 
 
-//
-// Preserve /* */ comments in output, true to preserve comments.
-//
-$config['comments'] = false;
+    /**
+     * Output format for resulting css-code, set to null for default.
+     *
+     * lessjs (default) — Same style used in LESS for JavaScript
+     * compressed — Compresses all the unrequired whitespace
+     * classic — lessphp’s original formatter
+     */
+    'formatter' => null,
+    //$config['formatter'] = 'compressed',
 
 
-//
-// Extend less language by register own functions to lessphp compiler.
-//
-$config['functions'] = array(
+    /**
+     * Preserve comments in output, true to preserve comments.
+     */
+    'comments' => false,
 
-  //
-  // Function unit
-  //
-  // mixins.less:  font: 100.01%/(unit((@magicNumber)/unit(@fontSizeBody))) @fontFamilyBody;
-  // mixins.less:  line-height: unit(@magicNumber/(@fontSize*@fontSizeBody)); 
-  //
-  'unit' => function($arg) {
-    list($type, $value) = $arg;
-    return array($type, $value);
-  },
 
+    /**
+     * Extend less language by register own functions to lessphp compiler.
+     *
+     */
+    'functions' => array(
+
+        /**
+        * Function unit
+        *
+        * mixins.less:  font: 100.01%/(unit((@magicNumber)/unit(@fontSizeBody))) @fontFamilyBody;
+        * mixins.less:  line-height: unit(@magicNumber/(@fontSize*@fontSizeBody)); 
+        */
+        'unit' => function($arg) {
+            list($type, $value) = $arg;
+            return array($type, $value);
+        },
+    ),
 );
