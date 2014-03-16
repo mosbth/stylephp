@@ -108,7 +108,7 @@ You will need to read the lessphp manual, to review the configuration options.
 
 
 
-###Make use of another config-file {#another}
+###Make use of another config-file
 
 If you want to try out `style.php` with anouther config-file, then create, for example, a `style-debug.php` and make it look like this.
 
