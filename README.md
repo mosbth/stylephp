@@ -217,5 +217,5 @@ v1.0.0 (2014-03-16)
 
 ```
  .   
-..:  Copyright 2012-14 by Mikael Roos (me@mikaelroos.se)
+..:  Copyright 2012-2014 by Mikael Roos (me@mikaelroos.se)
 ```
