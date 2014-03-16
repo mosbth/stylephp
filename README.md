@@ -11,7 +11,7 @@ The project includes essentials from lessphp to make it a working example. Just 
 
 
 
-License {#license}
+License 
 --------------------------------------
 
 The `style.php` is free software and open source software, licensed according MIT.
@@ -22,19 +22,19 @@ Read about the [LESS language](http://lesscss.org/). The creators of LESS also b
 
 
 
-Requirements {#reqs}
+Requirements 
 --------------------------------------
 
 `style.php` requires PHP 5.3 and uses lessphp. 
 
 
 
-Installation {#install}
+Installation
 --------------------------------------
 
 
 
-###Clone it from GitHub {#clone}
+###Clone it from GitHub
 
 The [sourcode is available on GitHub](https://github.com/mosbth/stylephp). Clone, fork or [download as zip](https://github.com/mosbth/stylephp/archive/master.zip). 
 
@@ -51,11 +51,9 @@ chmod 777 stylephp
 ```
 
 
-###Verify installation {#verify}
+###Verify installation
 
 Point your web browser to the installation directory and the test file `index.php`. It should look something like this.
-
-[FIGURE src=/image/snap/lessphp-index.png?w=w2&sa=jpg caption="The testfile uses `style.php` to create `style.css` from `style.less`."]
 
 To verify that it works, try editing `style.less` and change the value of `@bgcolor`. 
 
@@ -67,7 +65,7 @@ Reload the page and the background color should change appropriately, review the
 
 
 
-Basic usage {#usage}
+Basic usage
 --------------------------------------
 
 `style.php` uses lessphp for serverside compile LESS to CSS. `style.php` uses the function `autoCompileLess()` which is described in the lessphp manual. It adds gzip-encoding and enable sending header 304 Not Modified when the stylesheet is unchanged.
@@ -82,7 +80,7 @@ Use it like this.
 
 
 
-###Use `style.php` as a stylesheet {#asstyle}
+###Use `style.php` as a stylesheet
 
 Add the `style.php` as a styleshet to your webpage.
 
@@ -92,8 +90,6 @@ Add the `style.php` as a styleshet to your webpage.
 
 To see what happens, right click on your webpage and view its source, then click on `style.php` and view the generated CSS. The resulting CSS is stored in `style.css`.
 
-[FIGURE src=/image/snap/stylephp-view-source.png caption="Click on the stylesheet `style.php` and see the generated CSS as a result."]
-
 You can bypass `style.php` and use the generated `style.css` instead. This is useful when switching to a production environment.
 
 ```html
@@ -102,7 +98,7 @@ You can bypass `style.php` and use the generated `style.css` instead. This is us
 
 
 
-###Configuration options in `style_config.php` {#style-config}
+###Configuration options in `style_config.php` 
 
 There is a default `style_config.php` which works from the start. [Review its default settings](https://github.com/mosbth/stylephp/blob/master/style_config.php).
 
@@ -125,14 +121,14 @@ This enables you to have different ways of producing the stylesheet, perhaps one
 
 
 
-A sample installation {#installation}
+A sample installation 
 --------------------------------------
 
 You can see the [sample installation here]([BASEURL]kod-exempel/lessphp), together with its [source code]([BASEURL]kod-exempel/source.php?dir=lessphp).
 
 
 
-Troubleshooting {#trouble}
+Troubleshooting 
 --------------------------------------
 
 1. The stylesheet is not updated.
@@ -146,7 +142,7 @@ Troubleshooting {#trouble}
 
 
 
-Trouble and feature requests {#tr}
+Trouble and feature requests 
 --------------------------------------
 
 Use [GitHub to report issues](https://github.com/mosbth/stylephp/issues). Always include the following.
@@ -176,6 +172,11 @@ Visit the website for latest details and documentation on lessphp.
 
 Release history
 ------------------------------------------------
+
+v1.0.x (latest)
+
+* Updated `README.md` to remove links and images.
+
 
 v1.0.0 (2014-03-16)
 
